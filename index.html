@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caça ao Tesouro da Lilica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Tela Inicial -->
+        <div id="start-screen">
+            <h1>Bem-vindo à Caça ao Tesouro da Lilica!</h1>
+            <p>Ajude Lilica a encontrar o tesouro respondendo aos desafios.</p>
+            <button id="start-button">Começar</button>
+        </div>
+
+        <!-- Tela dos Níveis -->
+        <div id="level-screen" class="hidden">
+            <h2 id="level-title">Nível 1</h2>
+            <p id="question">Qual flor é vermelha?</p>
+            <button class="answer" onclick="checkAnswer('errado')">Girassol</button>
+            <button class="answer" onclick="checkAnswer('certo')">Rosa</button>
+            <button class="answer" onclick="checkAnswer('errado')">Margarida</button>
+            <p id="feedback"></p>
+        </div>
+
+        <!-- Tela Final -->
+        <div id="end-screen" class="hidden">
+            <h1>Parabéns, você encontrou o tesouro!</h1>
+            <p>Você é um grande explorador!</p>
+            <img src="treasure.png" alt="Tesouro" class="treasure">
+            <button onclick="restartGame()">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
